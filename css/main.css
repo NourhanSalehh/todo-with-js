@@ -46,22 +46,12 @@ button{
 }
 button:hover{
     background-color:var(--dark-color) ;
-    color: var(--lighting-color);
-    height: 50px;
-    padding-top: 10px;
-    width: 50%;
-    font-weight: 500;
-    margin:auto;
-    float: right;
-    border: 1px solid var(--mid-color)
 }
 ul {
-    margin: 0;
     padding: 0;
     margin-top: 100px;
 }
 /*End main content  */
-
   /* Start list items */
 ul li {
     cursor: pointer;

@@ -1,5 +1,4 @@
 let tasks = [];
-
 let taskIdCounter = 0;
 
 // Function to add a new task
@@ -18,28 +17,21 @@ const addTask = () => {
 
     // Clear the input field after adding the task
     input.value = "";
-
     renderTasks();
   }
 };
 
 const renderTasks = () => {
   const taskList = document.getElementById("taskList");
-  taskList.innerHTML = ""; // Clear the list before re-rendering
+  taskList.innerHTML = ""; 
 
   tasks.forEach((task, index) => {
     if (!task) return; 
 
-    // Create a list item for the task
     const listItem = document.createElement("li");
-
     
     // Set the task name and add action
-    listItem.innerHTML = `
-      ${task.name}
-  
-        <img onclick="deleteTask(${index})" src="imgs/images.png">
-    `;
+    listItem.innerHTML = `${task.name}<img onclick="deleteTask(${index})" src="imgs/images.png">`;
 
     listItem.addEventListener('click', function () {
       listItem.classList.toggle('checked');
@@ -47,8 +39,6 @@ const renderTasks = () => {
     
     if (task.done) {
     }
-
-    // Append the list item to the task list
     taskList.appendChild(listItem);
   });
 };
